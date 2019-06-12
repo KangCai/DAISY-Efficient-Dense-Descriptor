@@ -22,19 +22,29 @@ DAISY 设计的灵感来源于早期的一些描述子，比如 SIFT 和 GLOH，
 
 **1. 计算每个像素的一维梯度，进而计算梯度方向、幅度，并统计它对不同方向的贡献（权重占比）**
 
+不同方向的梯度可以用一维梯度来计算，计算高效，如下所示，
+
 <img src="https://raw.githubusercontent.com/KangCai/DAISY-Efficient-Dense-Descriptor/master/images/doc/1.png"/>
 
 **2. 计算每个像素以该像素为中心的，高斯卷积核平滑后的，作为不同层（中心、内、中、外）上、对不同方向的贡献**
 
-**3. 对某一个像素，统计其周边不同层、不同方向上的直方图特征，假设维度为 D；**
+不仅同一个像素的直方图可以被周边多个采样点重复使用，加快计算效率；而且对于同一像素的外层直方图也可以根据内层直方图计算得到，如下所示，
 
-**4. 以固定步长采样的方式获取前述 P 个点；总数据量为 P * D**
+<img src="https://raw.githubusercontent.com/KangCai/DAISY-Efficient-Dense-Descriptor/master/images/doc/2.png"/>
 
----
+**3. 对某一个像素，统计其周边不同层、不同方向上的直方图特征，假设维度为 D**
 
-### 特征效果
+得到一个采样点的特征表示如下，维度 D = number_of_rings * d(h) = (rings * histograms + 1) * orientations，如下所示，
 
-特征提取过程中，产生的中间图像如下组图所示，
+<img src="https://raw.githubusercontent.com/KangCai/DAISY-Efficient-Dense-Descriptor/master/images/doc/3.png"/>
+
+**4. 以固定步长采样的方式获取 P 个采样点；总数据量为 P * D**
+
+以固定的宽和高的步长进行采样，如下所示是总的特征示意图，
+
+<img src="https://raw.githubusercontent.com/KangCai/DAISY-Efficient-Dense-Descriptor/master/images/doc/4.png"/>
+
+
 
 
 
