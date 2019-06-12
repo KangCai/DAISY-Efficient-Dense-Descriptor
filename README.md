@@ -2,7 +2,7 @@
 
 [中文](https://github.com/KangCai/DAISY-Efficient-Dense-Descriptor/blob/master/README_zh_CN.md)
 
-Kang is glad you find me. This is an project for realization of paper "DAISY: An Efficient Dense Descriptor Applied
+Kang is glad you find me. This is an project for explanation and application of paper "DAISY: An Efficient Dense Descriptor Applied
 to Wide-Baseline Stereo". Any suggestions or comments well be welcome.
 
 ---
@@ -11,7 +11,7 @@ to Wide-Baseline Stereo". Any suggestions or comments well be welcome.
 
 In this paper, we introduce a local image descriptor, DAISY, which is very efficient to compute densely. We also present an
 EM-based algorithm to compute dense depth and occlusion maps from wide-baseline image pairs using this descriptor. This yields
-much better results in wide-baseline situations than the pixel and correlation-based algorithms that are commonly used in narrowbaseline stereo. Also, using a descriptor makes our algorithm robust against many photometric and geometric transformations. Our
+much better results in wide-baseline situations than the pixel and correlation-based algorithms that are commonly used in narrow-baseline stereo. Also, using a descriptor makes our algorithm robust against many photometric and geometric transformations. Our
 descriptor is inspired from earlier ones such as SIFT and GLOH but can be computed much faster for our purposes. Unlike SURF,
 which can also be computed efficiently at every pixel, it does not introduce artifacts that degrade the matching performance when used
 densely. It is important to note that our approach is the first algorithm that attempts to estimate dense depth maps from wide-baseline

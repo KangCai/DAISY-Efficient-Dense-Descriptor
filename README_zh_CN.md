@@ -2,7 +2,7 @@
 
 [English](https://github.com/KangCai/DAISY-Efficient-Dense-Descriptor/blob/master/README.md)
 
-很高兴你发现了这个项目，该项目是一个论文方法实现工程，原论文是 "DAISY: An Efficient Dense Descriptor Applied
+很高兴你发现了这个项目，该项目是对一个论文算法的解释和应用，原论文是 "DAISY: An Efficient Dense Descriptor Applied
 to Wide-Baseline Stereo"。欢迎提出任何意见或建议。
 
 ---
